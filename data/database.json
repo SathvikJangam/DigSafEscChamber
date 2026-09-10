@@ -5,14 +5,14 @@
       "username": "Agent_Specter",
       "email": "judge@hackathon.ai",
       "avatar": "🛡️",
-      "level": 3,
-      "levelTitle": "CYBER SCOUT",
-      "xp": 1170,
-      "xpToNextLevel": 1200,
+      "level": 4,
+      "levelTitle": "SECURITY HUNTER",
+      "xp": 1470,
+      "xpToNextLevel": 2000,
       "lives": 3,
       "maxLives": 3,
-      "streak": 0,
-      "cyberSafetyScore": 88,
+      "streak": 2,
+      "cyberSafetyScore": 84,
       "campus": "Cyber Defense Academy",
       "role": "player",
       "createdAt": "2026-09-08T12:00:00Z",
@@ -21,12 +21,12 @@
         "mission-2"
       ],
       "perfectMissions": 1,
-      "threatsIdentified": 17,
+      "threatsIdentified": 21,
       "bestCombo": 5,
       "categoryScores": {
         "phishing": 92,
-        "password": 92,
-        "qr": 65,
+        "password": 95,
+        "qr": 68,
         "scam": 89,
         "social_engineering": 78,
         "multi_threat": 82
@@ -1533,122 +1533,106 @@
   ],
   "sessions": {
     "usr-demo-judge": {
-      "missionId": "mission-2",
-      "currentChallengeIndex": 0,
+      "missionId": "mission-3",
+      "currentChallengeIndex": 1,
       "currentChallenge": {
-        "id": "ch-201",
-        "missionId": "mission-2",
-        "title": "ENTROPY EVALUATION & CRACK TIME",
-        "category": "password",
-        "difficulty": "ROOKIE",
+        "id": "ch-302",
+        "missionId": "mission-3",
+        "title": "IN-PERSON EVENT BADGE QUISHING",
+        "category": "qr",
+        "difficulty": "INTERMEDIATE",
         "timeLimit": 120,
-        "xpReward": 100,
-        "scenario": "Evaluate four candidate passwords for an enterprise database administrator account. Identify the strongest option that withstands modern GPU cluster dictionary attacks.",
-        "learningObjective": "Understand length vs complexity, word combinations, and entropy calculations in password defense.",
+        "xpReward": 120,
+        "scenario": "At a tech conference, someone hands out flyers: \"Scan this QR code to claim your free $50 Uber Eats voucher sponsored by the event host\".",
+        "learningObjective": "Recognize URL shorteners, deceptive incentives, and OAuth harvesting behind promotional QR codes.",
         "clues": [
           {
-            "id": "cl-201-1",
-            "name": "Length Multiplier Law",
-            "location": "Cryptographic rules",
-            "description": "Every additional random character exponentially increases keyspace far more than simple character substitutions (e.g. @ for a).",
-            "threatType": "Keyspace Mathematics"
+            "id": "cl-302-1",
+            "name": "Obfuscated Shortened Link",
+            "location": "QR Destination",
+            "description": "The QR resolves to a bit.ly or tinyurl short link that masks the true destination domain.",
+            "threatType": "URL Shortener Masking"
+          },
+          {
+            "id": "cl-302-2",
+            "name": "Too Good To Be True Incentive",
+            "location": "Flyer copy",
+            "description": "Unsolicited $50 cash voucher without requiring any conference ticket proof.",
+            "threatType": "Greed / Reward Lure"
           }
         ],
         "mockData": {
-          "passwordScenario": {
-            "context": "Select the cryptographically superior password for an administrator vault:",
-            "candidates": [
-              {
-                "id": "pw-1",
-                "passwordText": "P@$$w0rd2026!",
-                "strength": "Weak",
-                "crackTime": "0.04 seconds on RTX 4090 cluster",
-                "entropy": 34,
-                "flaws": [
-                  "Predictable l33t speak substitutions",
-                  "Common dictionary root",
-                  "Sequential year suffix"
-                ]
-              },
-              {
-                "id": "pw-2",
-                "passwordText": "AdminSummer99#",
-                "strength": "Weak",
-                "crackTime": "1.2 seconds",
-                "entropy": 38,
-                "flaws": [
-                  "Season + Year pattern (top 10 enterprise breach list)"
-                ]
-              },
-              {
-                "id": "pw-3",
-                "passwordText": "flock-cobalt-granite-whistle-49",
-                "strength": "Strong",
-                "crackTime": "42,000,000 Years",
-                "entropy": 84,
-                "flaws": [
-                  "None. 5 random unrelated words + numeric salt with high entropy"
-                ]
-              },
-              {
-                "id": "pw-4",
-                "passwordText": "Tr0ub4dor&3",
-                "strength": "Medium",
-                "crackTime": "3 days",
-                "entropy": 46,
-                "flaws": [
-                  "Famous xkcd example, well-known in wordlists"
-                ]
-              }
+          "qrScenario": {
+            "qrLabel": "CONFERENCE VIP: $50 UBER EATS SPONSOR VOUCHER",
+            "locationPoster": "Cardboard flyer on lunch tables",
+            "scannedUrl": "https://tinyurl.com/ubereats-vip-sponsor2026",
+            "realDestination": "https://phishing-uber-login.tech/oauth/harvest",
+            "sslValid": true,
+            "domainAge": "12 hours old",
+            "redFlags": [
+              "URL shortener hides actual domain",
+              "Asks for Uber password to \"link discount\""
             ]
           }
         },
         "options": [
           {
-            "id": "opt-201-a",
-            "text": "P@$$w0rd2026! (Has symbols, uppercase, lowercase, and numbers)",
+            "id": "opt-302-a",
+            "text": "Scan the QR and enter your Uber password to claim the voucher",
             "isCorrect": false,
-            "explanation": "Modern hash-cracking tools (Hashcat) crack this in under a second because the substitution rules are pre-computed.",
-            "riskPenalty": "-1 Life. Cracked in 0.04s."
+            "explanation": "The phishing page harvests your Uber login, leading to unauthorized rides charged to your saved card.",
+            "riskPenalty": "-1 Life. Account hijacked."
           },
           {
-            "id": "opt-201-b",
-            "text": "AdminSummer99# (Contains uppercase and company-themed season)",
-            "isCorrect": false,
-            "explanation": "Season+Year is the #1 password pattern targeted by automated password-spraying tools against Active Directory.",
-            "riskPenalty": "-1 Life. Password sprayed."
-          },
-          {
-            "id": "opt-201-c",
-            "text": "flock-cobalt-granite-whistle-49 (Passphrase with 30+ chars, random words, massive entropy)",
+            "id": "opt-302-b",
+            "text": "Unshorten or inspect the URL preview, confirm lack of official event sponsorship, and discard the flyer",
             "isCorrect": true,
-            "explanation": "Correct! Length is king in cryptographic entropy. A 5-word random passphrase takes billions of years to brute force."
+            "explanation": "Correct! Always expand shortened URLs (using URL checkers) and recognize that legitimate corporate sponsors distribute promo codes, not QR login gates."
           },
           {
-            "id": "opt-201-d",
-            "text": "Tr0ub4dor&3 (Classic complex short password)",
+            "id": "opt-302-c",
+            "text": "Forward the QR photo to all your friends so they can claim $50 too",
             "isCorrect": false,
-            "explanation": "Too short (11 chars) and present in public breach wordlists.",
-            "riskPenalty": "-1 Life. Dictionary match."
+            "explanation": "Spreading the malicious QR amplifies the scam among your colleagues.",
+            "riskPenalty": "-1 Life. Attack multiplied."
+          },
+          {
+            "id": "opt-302-d",
+            "text": "Scan the QR on your laptop webcam instead of your phone",
+            "isCorrect": false,
+            "explanation": "Laptop browsers are just as vulnerable to credential harvesting sites.",
+            "riskPenalty": "-1 Life. Credential leak."
           }
         ],
-        "correctAnswerId": "opt-201-c",
-        "explanation": "Length beats complexity every time. A 4-5 random word passphrase (Diceware style) provides 80+ bits of entropy while remaining memorable without predictable patterns."
+        "correctAnswerId": "opt-302-b",
+        "explanation": "QR codes are simply graphical representations of URLs. Treat every QR code with the exact same skepticism as an unknown link in a spam email."
       },
-      "totalChallenges": 3,
+      "totalChallenges": 2,
       "lives": 3,
-      "score": 50,
-      "xpEarned": 50,
-      "combo": 0,
+      "score": 200,
+      "xpEarned": 200,
+      "combo": 1,
       "discoveredClues": [
-        "cl-201-1"
+        "cl-301-2",
+        "cl-301-1"
       ],
-      "hintsUsed": 0,
+      "hintsUsed": 1,
       "timeRemaining": 120,
-      "startedAt": 1789034542490,
+      "startedAt": 1789034867297,
       "isComplete": false,
       "isBreached": false,
-      "attempts": []
+      "attempts": [
+        {
+          "challengeId": "ch-301",
+          "selectedOptionId": "opt-301-b",
+          "isCorrect": true,
+          "responseTimeMs": 37238,
+          "discoveredClues": [
+            "cl-301-2",
+            "cl-301-1"
+          ]
+        }
+      ]
     },
     "usr-1789032870665-neoem": {
       "missionId": "mission-1",
@@ -1932,6 +1916,28 @@
     }
   },
   "attempts": [
+    {
+      "id": "att-1789034904580",
+      "userId": "usr-demo-judge",
+      "username": "Agent_Specter",
+      "challengeId": "ch-301",
+      "challengeTitle": "PARKING METER TAMPER STICKER",
+      "category": "qr",
+      "isCorrect": true,
+      "responseTimeMs": 37238,
+      "timestamp": "2026-09-10T10:08:24.580Z"
+    },
+    {
+      "id": "att-1789034826262",
+      "userId": "usr-demo-judge",
+      "username": "Agent_Specter",
+      "challengeId": "ch-201",
+      "challengeTitle": "ENTROPY EVALUATION & CRACK TIME",
+      "category": "password",
+      "isCorrect": true,
+      "responseTimeMs": 282250,
+      "timestamp": "2026-09-10T10:07:06.262Z"
+    },
     {
       "id": "att-seed-1",
       "userId": "usr-demo-judge",

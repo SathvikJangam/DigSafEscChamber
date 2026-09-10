@@ -1,0 +1,161 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-game-display: 'Oxanium', 'Chakra Petch', system-ui, sans-serif;
+    --font-game-hud: 'Rajdhani', sans-serif;
+    --font-game-tactical: 'Barlow Condensed', sans-serif;
+    --font-game-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-game-code: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-game-body);
+    background-color: #06080d;
+    color: #e2e8f0;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-game, .cyber-font {
+    font-family: var(--font-game-display);
+    letter-spacing: 0.04em;
+  }
+
+  .font-hud {
+    font-family: var(--font-game-hud);
+    letter-spacing: 0.05em;
+  }
+
+  .font-tactical {
+    font-family: var(--font-game-tactical);
+    letter-spacing: 0.06em;
+  }
+
+  .font-body {
+    font-family: var(--font-game-body);
+  }
+
+  code, pre, .font-code, .mono-font {
+    font-family: var(--font-game-code);
+  }
+}
+
+/* Realistic Gaming HUD & Atmospheric Overlays */
+.game-vignette {
+  background: radial-gradient(circle at center, transparent 35%, rgba(4, 6, 11, 0.85) 90%);
+}
+
+.game-vignette-heavy {
+  background: radial-gradient(circle at center, transparent 20%, rgba(3, 5, 8, 0.95) 85%);
+}
+
+.game-backdrop-panel {
+  background: rgba(10, 15, 26, 0.78);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(51, 65, 85, 0.55);
+}
+
+.game-card-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.game-card-hover:hover {
+  transform: translateY(-2px);
+  border-color: rgba(6, 182, 212, 0.6);
+  box-shadow: 0 10px 30px -10px rgba(6, 182, 212, 0.25);
+}
+
+/* Tactical chamfers */
+.clip-tactical {
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
+}
+
+.clip-tactical-top {
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);
+}
+
+.clip-corner {
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+}
+
+.clip-corner-sm {
+  clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 6px 100%, 0 calc(100% - 6px));
+}
+
+/* Subtle tactical scanline */
+.game-scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.22) 50%
+  );
+  background-size: 100% 3px;
+}
+
+/* Realistic metallic sheen */
+.metallic-bar {
+  background: linear-gradient(90deg, #1e293b 0%, #334155 50%, #1e293b 100%);
+}
+
+/* Custom Cyber HUD scanline and grid utilities */
+.cyber-grid {
+  background-image: 
+    linear-gradient(to right, rgba(6, 182, 212, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(6, 182, 212, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.cyber-grid-dense {
+  background-image: 
+    linear-gradient(to right, rgba(16, 185, 129, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(16, 185, 129, 0.04) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.crt-lines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  );
+  background-size: 100% 4px;
+}
+
+.cyber-box-glow {
+  box-shadow: 0 0 20px -5px rgba(6, 182, 212, 0.25), inset 0 0 15px -5px rgba(6, 182, 212, 0.1);
+}
+
+.cyber-red-glow {
+  box-shadow: 0 0 20px -5px rgba(239, 68, 68, 0.35), inset 0 0 15px -5px rgba(239, 68, 68, 0.15);
+}
+
+.cyber-green-glow {
+  box-shadow: 0 0 20px -5px rgba(16, 185, 129, 0.3), inset 0 0 15px -5px rgba(16, 185, 129, 0.1);
+}
+
+.clip-corner {
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+}
+
+.clip-corner-sm {
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0f19;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0ea5e9;
+}
+

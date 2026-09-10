@@ -1,0 +1,1958 @@
+{
+  "users": {
+    "usr-demo-judge": {
+      "id": "usr-demo-judge",
+      "username": "Agent_Specter",
+      "email": "judge@hackathon.ai",
+      "avatar": "🛡️",
+      "level": 3,
+      "levelTitle": "CYBER SCOUT",
+      "xp": 1170,
+      "xpToNextLevel": 1200,
+      "lives": 3,
+      "maxLives": 3,
+      "streak": 0,
+      "cyberSafetyScore": 88,
+      "campus": "Cyber Defense Academy",
+      "role": "player",
+      "createdAt": "2026-09-08T12:00:00Z",
+      "completedMissions": [
+        "mission-1",
+        "mission-2"
+      ],
+      "perfectMissions": 1,
+      "threatsIdentified": 17,
+      "bestCombo": 5,
+      "categoryScores": {
+        "phishing": 92,
+        "password": 92,
+        "qr": 65,
+        "scam": 89,
+        "social_engineering": 78,
+        "multi_threat": 82
+      },
+      "passwordHash": "253dd8d26542f05991d4889e876af50ef2b347e98f59214e9066b0d8dd9975e3"
+    },
+    "usr-admin-secops": {
+      "id": "usr-admin-secops",
+      "username": "SecOps_Director",
+      "email": "admin@cybersafety.org",
+      "avatar": "🔐",
+      "level": 8,
+      "levelTitle": "SECURITY MASTER",
+      "xp": 12500,
+      "xpToNextLevel": 15000,
+      "lives": 3,
+      "maxLives": 3,
+      "streak": 21,
+      "cyberSafetyScore": 98,
+      "campus": "Cyber Defense Command",
+      "role": "admin",
+      "createdAt": "2026-08-01T00:00:00Z",
+      "completedMissions": [
+        "mission-1",
+        "mission-2",
+        "mission-3",
+        "mission-4",
+        "mission-5",
+        "mission-6"
+      ],
+      "perfectMissions": 6,
+      "threatsIdentified": 48,
+      "bestCombo": 12,
+      "categoryScores": {
+        "phishing": 98,
+        "password": 99,
+        "qr": 95,
+        "scam": 96,
+        "social_engineering": 97,
+        "multi_threat": 98
+      },
+      "passwordHash": "8aca993c692efc402a1b92a8a1a14c11d737f9c14252b9f65b7315efb040e41c"
+    },
+    "usr-1789032870665-neoem": {
+      "id": "usr-1789032870665-neoem",
+      "username": "AgentTest1",
+      "email": "test1@example.com",
+      "avatar": "🛡️",
+      "level": 1,
+      "levelTitle": "DIGITAL ROOKIE",
+      "xp": 0,
+      "xpToNextLevel": 300,
+      "lives": 3,
+      "maxLives": 3,
+      "streak": 1,
+      "cyberSafetyScore": 75,
+      "campus": "MIT Cybersecurity Lab",
+      "role": "player",
+      "createdAt": "2026-09-10T09:34:30.665Z",
+      "completedMissions": [],
+      "perfectMissions": 0,
+      "threatsIdentified": 0,
+      "bestCombo": 0,
+      "categoryScores": {
+        "phishing": 75,
+        "password": 75,
+        "qr": 75,
+        "scam": 75,
+        "social_engineering": 75,
+        "multi_threat": 75
+      },
+      "passwordHash": "ce02432ec13e84bda3b97e14dd26d75bdde8221ea0365aaaac7032a77c4015bd"
+    },
+    "usr-1789033302912-e61u8": {
+      "id": "usr-1789033302912-e61u8",
+      "username": "Sathvik",
+      "email": "sathvik@gmail.com",
+      "avatar": "🛡️",
+      "level": 1,
+      "levelTitle": "DIGITAL ROOKIE",
+      "xp": 0,
+      "xpToNextLevel": 300,
+      "lives": 3,
+      "maxLives": 3,
+      "streak": 1,
+      "cyberSafetyScore": 75,
+      "campus": "MIT Cybersecurity Lab",
+      "role": "player",
+      "createdAt": "2026-09-10T09:41:42.912Z",
+      "completedMissions": [],
+      "perfectMissions": 0,
+      "threatsIdentified": 0,
+      "bestCombo": 0,
+      "categoryScores": {
+        "phishing": 75,
+        "password": 75,
+        "qr": 75,
+        "scam": 75,
+        "social_engineering": 75,
+        "multi_threat": 75
+      },
+      "passwordHash": "cf3affa2a9243e99950fcd9ca29fed2f1ea5c1f7f895f3c9017c2ddf083e48e7"
+    }
+  },
+  "missions": [
+    {
+      "id": "mission-1",
+      "order": 1,
+      "codeName": "OPERATION PHISH-NET",
+      "title": "PHISHING PROTOCOL",
+      "description": "Identify malicious emails, deceptive sender domains, and fake verification traps before credentials leak.",
+      "category": "phishing",
+      "difficulty": "ROOKIE",
+      "locked": false,
+      "estimatedTime": "4m 30s",
+      "iconName": "MailWarning",
+      "challenges": [
+        {
+          "id": "ch-101",
+          "missionId": "mission-1",
+          "title": "URGENT ACCOUNT SUSPENSION ALERT",
+          "category": "phishing",
+          "difficulty": "ROOKIE",
+          "timeLimit": 120,
+          "xpReward": 100,
+          "scenario": "A student receives an alarming email stating their institutional account will be terminated in 2 hours unless immediate verification is performed.",
+          "learningObjective": "Analyze sender domain mismatches, artificial urgency, and deceptive link targets in institutional phishing.",
+          "clues": [
+            {
+              "id": "cl-101-1",
+              "name": "Sender Domain Mismatch",
+              "location": "From: header",
+              "description": "The sender claims to be University IT, but the actual domain is @university-account-verification.example rather than the legitimate @university.edu domain.",
+              "threatType": "Domain Spoofing"
+            },
+            {
+              "id": "cl-101-2",
+              "name": "Artificial Urgency Deadline",
+              "location": "Subject & Body",
+              "description": "The message insists on action within 2 hours (\"Account suspended in 01:59:59\") to force panic and bypass critical thinking.",
+              "threatType": "Psychological Coercion"
+            },
+            {
+              "id": "cl-101-3",
+              "name": "Obfuscated Target URL",
+              "location": "Action Button",
+              "description": "The button displays \"verify-edu.org\" but the actual hyperlink destination is \"http://suspicious-login-gate.net/harvest?session=4912\".",
+              "threatType": "Deceptive Hyperlink"
+            }
+          ],
+          "mockData": {
+            "email": {
+              "senderName": "University IT Security Desk",
+              "senderEmail": "security@university-account-verification.example",
+              "replyTo": "harvester-drop99@temp-mail.ru",
+              "subject": "⚠️ CRITICAL: Your university account will be suspended within 2 hours",
+              "date": "Today, 09:14 AM",
+              "body": "Dear Student/Staff Member,\n\nOur automated security scanner detected unverified activity on your institutional mailbox. Due to recent security compliance updates, all unverified accounts will be permanently wiped within 2 hours.\n\nTo prevent immediate suspension, you must verify your identity immediately by clicking the secure university portal link below.",
+              "targetUrl": "http://suspicious-login-gate.net/harvest?session=4912",
+              "displayUrl": "https://portal.university.edu/verify-identity",
+              "attachmentName": "Account_Termination_Notice_Scan.pdf.exe",
+              "attachmentType": "Executable hidden as PDF"
+            }
+          },
+          "options": [
+            {
+              "id": "opt-101-a",
+              "text": "Open the link immediately to prevent your university account from being locked",
+              "isCorrect": false,
+              "explanation": "Opening the link navigates to an unauthorized credential harvesting portal designed to steal your student password.",
+              "riskPenalty": "-1 Life. Credentials compromised."
+            },
+            {
+              "id": "opt-101-b",
+              "text": "Reply to the sender email asking for their staff identification number",
+              "isCorrect": false,
+              "explanation": "Replying confirms your email address is active to the attacker and replies to an attacker drop-box address.",
+              "riskPenalty": "-1 Life. Confirmed target status."
+            },
+            {
+              "id": "opt-101-c",
+              "text": "REPORT PHISHING to IT Security and delete the message without clicking any links",
+              "isCorrect": true,
+              "explanation": "Correct! You correctly spotted the lookalike domain, artificial panic timeline, and hidden executable attachment."
+            },
+            {
+              "id": "opt-101-d",
+              "text": "Forward the email to classmates to warn them using the provided link",
+              "isCorrect": false,
+              "explanation": "Forwarding propagates the phishing attack and could compromise classmates who click the link.",
+              "riskPenalty": "-1 Life. Attack propagated."
+            }
+          ],
+          "correctAnswerId": "opt-101-c",
+          "explanation": "Attackers frequently forge organizational authority and induce urgency. Always inspect the true domain suffix and never click embedded verification links from unsolicited warnings."
+        },
+        {
+          "id": "ch-102",
+          "missionId": "mission-1",
+          "title": "PAYROLL UPDATE DISCREPANCY",
+          "category": "phishing",
+          "difficulty": "ROOKIE",
+          "timeLimit": 120,
+          "xpReward": 100,
+          "scenario": "An email arrives from \"HR Global Payroll\" requesting you review an attached macro-enabled spreadsheet to claim a direct deposit adjustment.",
+          "learningObjective": "Recognize weaponized office attachments (.xlsm / macros) used to drop ransomware and steal session tokens.",
+          "clues": [
+            {
+              "id": "cl-102-1",
+              "name": "Macro-Enabled Extension",
+              "location": "Attachment name",
+              "description": "The attachment is titled \"Q3_Bonus_Adjustment_Calculation.xlsm\" — macro-enabled workbooks can run arbitrary malicious scripts on execution.",
+              "threatType": "Malicious Attachment"
+            },
+            {
+              "id": "cl-102-2",
+              "name": "Generic Greeting",
+              "location": "Email greeting",
+              "description": "Addressed to \"Valued Employee\" rather than your specific legal name, indicating bulk untargeted phishing.",
+              "threatType": "Generic Phishing Indicator"
+            }
+          ],
+          "mockData": {
+            "email": {
+              "senderName": "HR Global Payroll Department",
+              "senderEmail": "payroll-department@corporate-hr-notices.net",
+              "subject": "Direct Deposit Adjustment Notice: Q3 Compensation Adjustment",
+              "date": "Yesterday, 4:45 PM",
+              "body": "Attention Valued Employee,\n\nA discrepancy was identified in your compensation distribution for this pay cycle. Please open the attached spreadsheet, click \"Enable Content/Macros\" when prompted, and confirm your bank routing number.",
+              "targetUrl": "https://corporate-hr-notices.net/upload",
+              "displayUrl": "https://hr.internal.com/payroll",
+              "attachmentName": "Q3_Bonus_Adjustment_Calculation.xlsm",
+              "attachmentType": "Macro-Enabled Excel Spreadsheet"
+            }
+          },
+          "options": [
+            {
+              "id": "opt-102-a",
+              "text": "Download the spreadsheet and click \"Enable Macros\" to see the bonus calculation",
+              "isCorrect": false,
+              "explanation": "Enabling macros executes arbitrary PowerShell scripts that download malicious payloads.",
+              "riskPenalty": "-1 Life. Malware executed."
+            },
+            {
+              "id": "opt-102-b",
+              "text": "Inspect attachment extension, refrain from opening, and report to SecOps via official channels",
+              "isCorrect": true,
+              "explanation": "Spot on! Never enable macros on unsolicited documents, and verify payroll requests directly on your authenticated portal."
+            },
+            {
+              "id": "opt-102-c",
+              "text": "Open the spreadsheet on your phone instead since phones cannot run macros",
+              "isCorrect": false,
+              "explanation": "Modern mobile devices can still be compromised by multi-stage exploit payloads or credential phishing forms.",
+              "riskPenalty": "-1 Life. Risky behavior."
+            },
+            {
+              "id": "opt-102-d",
+              "text": "Reply with your bank routing number directly in plain text to avoid macro issues",
+              "isCorrect": false,
+              "explanation": "Sending sensitive financial data via unencrypted email exposes your account to identity theft.",
+              "riskPenalty": "-1 Life. Data exfiltrated."
+            }
+          ],
+          "correctAnswerId": "opt-102-b",
+          "explanation": "Macro-enabled spreadsheets (.xlsm, .docm) are one of the most common ransomware vectors. Legitimate HR systems never ask you to enable macros to calculate payroll."
+        },
+        {
+          "id": "ch-103",
+          "missionId": "mission-1",
+          "title": "CLOUD DRIVE OAUTH CONSENT HIJACK",
+          "category": "phishing",
+          "difficulty": "INTERMEDIATE",
+          "timeLimit": 120,
+          "xpReward": 120,
+          "scenario": "You receive a notification that a teammate has shared a document titled \"Confidential Project Roadmap\". The screen prompts an OAuth permission consent dialog.",
+          "learningObjective": "Understand Illicit Consent Grant attacks where malicious third-party apps request full mailbox and cloud drive read/write access.",
+          "clues": [
+            {
+              "id": "cl-103-1",
+              "name": "Excessive OAuth Scopes",
+              "location": "Permissions list",
+              "description": "The requesting app asks for \"Read, send, delete all emails\" and \"Full offline access to files\" just to view a single PDF.",
+              "threatType": "Illicit Consent Grant"
+            },
+            {
+              "id": "cl-103-2",
+              "name": "Unverified Publisher",
+              "location": "App Publisher Banner",
+              "description": "Banner reads \"Publisher unverified: dev-app-free-host.xyz\" instead of Microsoft 365 or Google Workspace.",
+              "threatType": "Rogue Application"
+            }
+          ],
+          "mockData": {
+            "email": {
+              "senderName": "Cloud Workspace Share Service",
+              "senderEmail": "share-notification@cloud-doc-viewing.tech",
+              "subject": "Sarah Jenkins shared \"Q4_Confidential_Roadmap.pdf\" with you",
+              "date": "Today, 11:20 AM",
+              "body": "Sarah Jenkins (sjenkins@corp.com) has invited you to view an encrypted project document. To access this secured file, grant permission to CloudDoc Viewer.",
+              "targetUrl": "https://login.oauth-proxy.tech/authorize?client_id=rogue_9182&scope=mail.readwrite+files.readwrite.all",
+              "displayUrl": "https://docs.workspace.com/view/q4_roadmap",
+              "attachmentName": "None",
+              "attachmentType": "OAuth Web Flow"
+            }
+          },
+          "options": [
+            {
+              "id": "opt-103-a",
+              "text": "Accept the OAuth permissions since it is from a teammate you know",
+              "isCorrect": false,
+              "explanation": "Accepting grants the malicious rogue app permanent API token access to your entire email inbox and drive files.",
+              "riskPenalty": "-1 Life. Full cloud account takeover."
+            },
+            {
+              "id": "opt-103-b",
+              "text": "Deny the permission request, verify with Sarah over a trusted channel, and report the rogue app",
+              "isCorrect": true,
+              "explanation": "Excellent! You identified an Illicit Consent Grant attack. Attackers exploit OAuth permissions to bypass passwords and MFA."
+            },
+            {
+              "id": "opt-103-c",
+              "text": "Change your password, then grant the application permissions",
+              "isCorrect": false,
+              "explanation": "Changing your password does not revoke OAuth tokens once granted! Tokens remain valid independently.",
+              "riskPenalty": "-1 Life. OAuth persistence remains."
+            },
+            {
+              "id": "opt-103-d",
+              "text": "Create a temporary guest account and authorize it there",
+              "isCorrect": false,
+              "explanation": "Authorizing rogue apps on organizational networks violates policy and still risks enterprise data exfiltration.",
+              "riskPenalty": "-1 Life. Policy breach."
+            }
+          ],
+          "correctAnswerId": "opt-103-b",
+          "explanation": "Illicit Consent Grant attacks don't require stealing your password. By convincing you to click \"Allow\", attackers acquire an API refresh token that survives password changes."
+        },
+        {
+          "id": "ch-104",
+          "missionId": "mission-1",
+          "title": "SPOOFED C-SUITE EMERGENCY REQUEST",
+          "category": "phishing",
+          "difficulty": "INTERMEDIATE",
+          "timeLimit": 120,
+          "xpReward": 120,
+          "scenario": "An email appearing to come from your CEO arrives from a mobile address: \"I'm in a confidential board meeting. Need you to purchase 10 Apple gift cards for client gifts immediately. Do not call, just reply with codes.\"",
+          "learningObjective": "Identify Business Email Compromise (BEC) and executive impersonation relying on authority and secrecy.",
+          "clues": [
+            {
+              "id": "cl-104-1",
+              "name": "Off-Domain Reply-To Address",
+              "location": "Reply-To Header",
+              "description": "Display name is \"CEO David Vance\", but actual Reply-To is \"ceo.office.mobile2026@gmail.com\".",
+              "threatType": "Display Name Spoofing"
+            },
+            {
+              "id": "cl-104-2",
+              "name": "Out-of-Band Payment / Gift Cards",
+              "location": "Email Content",
+              "description": "Requesting gift card codes or wire transfers under the guise of an urgent meeting is the hallmark of BEC fraud.",
+              "threatType": "Business Email Compromise"
+            }
+          ],
+          "mockData": {
+            "email": {
+              "senderName": "David Vance (CEO)",
+              "senderEmail": "david.vance@company.com <ceo.office.mobile2026@gmail.com>",
+              "replyTo": "ceo.office.mobile2026@gmail.com",
+              "subject": "URGENT: Confidential Task for Board Meeting - Need Immediate Action",
+              "date": "Today, 2:15 PM",
+              "body": "Are you currently at your desk? I am stuck in an all-day confidential executive board session and cannot take phone calls.\n\nI need you to handle an urgent client goodwill gesture: purchase 10x $100 Apple gift cards and email the scratched PIN codes directly to me before 3:00 PM. Expense it immediately.",
+              "targetUrl": "None",
+              "displayUrl": "None",
+              "attachmentName": "None",
+              "attachmentType": "Pure Text BEC"
+            }
+          },
+          "options": [
+            {
+              "id": "opt-104-a",
+              "text": "Comply immediately since the CEO directly requested it and you do not want to interrupt the board meeting",
+              "isCorrect": false,
+              "explanation": "The company funds will be lost forever. Gift cards are non-traceable and cannot be refunded.",
+              "riskPenalty": "-1 Life. $1,000 corporate loss."
+            },
+            {
+              "id": "opt-104-b",
+              "text": "Identify as Business Email Compromise (BEC), refuse the request, and report to security",
+              "isCorrect": true,
+              "explanation": "Sharp eyes! Executive impersonation relies on employees fearing authority. Always verify gift card and wire requests out-of-band."
+            },
+            {
+              "id": "opt-104-c",
+              "text": "Reply asking the CEO to provide their credit card first",
+              "isCorrect": false,
+              "explanation": "Replying keeps you engaged with the scammer and exposes corporate communications.",
+              "riskPenalty": "-1 Life. Engaged with attacker."
+            },
+            {
+              "id": "opt-104-d",
+              "text": "Buy just 1 card first to test if the CEO really needs it",
+              "isCorrect": false,
+              "explanation": "Any purchase results in irreversible financial loss and encourages further exploitation.",
+              "riskPenalty": "-1 Life. Financial compromise."
+            }
+          ],
+          "correctAnswerId": "opt-104-b",
+          "explanation": "CEOs do not ask staff to secretly buy retail gift cards or wire money without standard procurement approval. Verify via verified phone number or internal chat."
+        },
+        {
+          "id": "ch-105",
+          "missionId": "mission-1",
+          "title": "MFA FATIGUE & PUSH BOMBER TRAP",
+          "category": "phishing",
+          "difficulty": "ADVANCED",
+          "timeLimit": 120,
+          "xpReward": 150,
+          "scenario": "Your phone starts buzzing repeatedly at 3:15 AM with 14 consecutive Microsoft Authenticator push approvals. Simultaneously, you get an SMS claiming to be \"IT Support: Tap Approve to clear the spam error\".",
+          "learningObjective": "Defeat MFA Fatigue (Push Bombing) attacks by denying requests and triggering immediate credential revocation.",
+          "clues": [
+            {
+              "id": "cl-105-1",
+              "name": "Unprompted Authentication Requests",
+              "location": "Push notifications",
+              "description": "14 login approval prompts originating from an IP address in Frankfurt, Germany while you are asleep.",
+              "threatType": "MFA Push Bombing"
+            },
+            {
+              "id": "cl-105-2",
+              "name": "Social Engineering Coercion via SMS",
+              "location": "SMS text message",
+              "description": "Attacker sends an SMS pretending to be IT telling you to approve one prompt so the buzzing stops.",
+              "threatType": "Vishing / SMS Pressure"
+            }
+          ],
+          "mockData": {
+            "email": {
+              "senderName": "Identity & Access Gateway",
+              "senderEmail": "notifications@authenticator.microsoft.com",
+              "subject": "Sign-in request for your company account (14 pending)",
+              "date": "Today, 03:16 AM",
+              "body": "Approve sign-in? Location: Frankfurt, Germany. Device: Unknown Linux Firefox Browser. If this is not you, tap \"Deny\" immediately.",
+              "targetUrl": "Internal Authenticator App",
+              "displayUrl": "Authenticator MFA",
+              "attachmentName": "None",
+              "attachmentType": "MFA Push Prompt"
+            }
+          },
+          "options": [
+            {
+              "id": "opt-105-a",
+              "text": "Tap \"Approve\" on just one notification so the phone stops buzzing and you can go back to sleep",
+              "isCorrect": false,
+              "explanation": "Tapping Approve grants the adversary full access to your account with valid session cookies!",
+              "riskPenalty": "-1 Life. Full network penetration achieved by attacker."
+            },
+            {
+              "id": "opt-105-b",
+              "text": "Turn phone on airplane mode and ignore until morning",
+              "isCorrect": false,
+              "explanation": "While this stops the noise, the attacker already has your valid password. They will keep attacking or find another route.",
+              "riskPenalty": "-1 Life. Active threat left unmitigated."
+            },
+            {
+              "id": "opt-105-c",
+              "text": "Tap \"Deny\", select \"Report Fraud / It Wasn't Me\", and immediately reset your password on a trusted device",
+              "isCorrect": true,
+              "explanation": "Spot-on! If you receive unprompted MFA pushes, the attacker ALREADY knows your password. Deny fraud and reset credentials immediately."
+            },
+            {
+              "id": "opt-105-d",
+              "text": "Text back the SMS number asking what the IT ticket number is",
+              "isCorrect": false,
+              "explanation": "The SMS is controlled by the attacker doing the push bombing.",
+              "riskPenalty": "-1 Life. Interacting with adversary."
+            }
+          ],
+          "correctAnswerId": "opt-105-c",
+          "explanation": "MFA Fatigue works by wearing down targets until they accidentally tap \"Approve\". Remember: an MFA push ONLY happens if your password was already successfully entered."
+        }
+      ]
+    },
+    {
+      "id": "mission-2",
+      "order": 2,
+      "codeName": "OPERATION KEY-CIPHER",
+      "title": "PASSWORD VAULT",
+      "description": "Defend credential databases against entropy degradation, brute-force algorithms, and credential stuffing attacks.",
+      "category": "password",
+      "difficulty": "INTERMEDIATE",
+      "locked": false,
+      "estimatedTime": "5m 00s",
+      "iconName": "Key",
+      "challenges": [
+        {
+          "id": "ch-201",
+          "missionId": "mission-2",
+          "title": "ENTROPY EVALUATION & CRACK TIME",
+          "category": "password",
+          "difficulty": "ROOKIE",
+          "timeLimit": 120,
+          "xpReward": 100,
+          "scenario": "Evaluate four candidate passwords for an enterprise database administrator account. Identify the strongest option that withstands modern GPU cluster dictionary attacks.",
+          "learningObjective": "Understand length vs complexity, word combinations, and entropy calculations in password defense.",
+          "clues": [
+            {
+              "id": "cl-201-1",
+              "name": "Length Multiplier Law",
+              "location": "Cryptographic rules",
+              "description": "Every additional random character exponentially increases keyspace far more than simple character substitutions (e.g. @ for a).",
+              "threatType": "Keyspace Mathematics"
+            }
+          ],
+          "mockData": {
+            "passwordScenario": {
+              "context": "Select the cryptographically superior password for an administrator vault:",
+              "candidates": [
+                {
+                  "id": "pw-1",
+                  "passwordText": "P@$$w0rd2026!",
+                  "strength": "Weak",
+                  "crackTime": "0.04 seconds on RTX 4090 cluster",
+                  "entropy": 34,
+                  "flaws": [
+                    "Predictable l33t speak substitutions",
+                    "Common dictionary root",
+                    "Sequential year suffix"
+                  ]
+                },
+                {
+                  "id": "pw-2",
+                  "passwordText": "AdminSummer99#",
+                  "strength": "Weak",
+                  "crackTime": "1.2 seconds",
+                  "entropy": 38,
+                  "flaws": [
+                    "Season + Year pattern (top 10 enterprise breach list)"
+                  ]
+                },
+                {
+                  "id": "pw-3",
+                  "passwordText": "flock-cobalt-granite-whistle-49",
+                  "strength": "Strong",
+                  "crackTime": "42,000,000 Years",
+                  "entropy": 84,
+                  "flaws": [
+                    "None. 5 random unrelated words + numeric salt with high entropy"
+                  ]
+                },
+                {
+                  "id": "pw-4",
+                  "passwordText": "Tr0ub4dor&3",
+                  "strength": "Medium",
+                  "crackTime": "3 days",
+                  "entropy": 46,
+                  "flaws": [
+                    "Famous xkcd example, well-known in wordlists"
+                  ]
+                }
+              ]
+            }
+          },
+          "options": [
+            {
+              "id": "opt-201-a",
+              "text": "P@$$w0rd2026! (Has symbols, uppercase, lowercase, and numbers)",
+              "isCorrect": false,
+              "explanation": "Modern hash-cracking tools (Hashcat) crack this in under a second because the substitution rules are pre-computed.",
+              "riskPenalty": "-1 Life. Cracked in 0.04s."
+            },
+            {
+              "id": "opt-201-b",
+              "text": "AdminSummer99# (Contains uppercase and company-themed season)",
+              "isCorrect": false,
+              "explanation": "Season+Year is the #1 password pattern targeted by automated password-spraying tools against Active Directory.",
+              "riskPenalty": "-1 Life. Password sprayed."
+            },
+            {
+              "id": "opt-201-c",
+              "text": "flock-cobalt-granite-whistle-49 (Passphrase with 30+ chars, random words, massive entropy)",
+              "isCorrect": true,
+              "explanation": "Correct! Length is king in cryptographic entropy. A 5-word random passphrase takes billions of years to brute force."
+            },
+            {
+              "id": "opt-201-d",
+              "text": "Tr0ub4dor&3 (Classic complex short password)",
+              "isCorrect": false,
+              "explanation": "Too short (11 chars) and present in public breach wordlists.",
+              "riskPenalty": "-1 Life. Dictionary match."
+            }
+          ],
+          "correctAnswerId": "opt-201-c",
+          "explanation": "Length beats complexity every time. A 4-5 random word passphrase (Diceware style) provides 80+ bits of entropy while remaining memorable without predictable patterns."
+        },
+        {
+          "id": "ch-202",
+          "missionId": "mission-2",
+          "title": "CREDENTIAL STUFFING RESISTANCE",
+          "category": "password",
+          "difficulty": "INTERMEDIATE",
+          "timeLimit": 120,
+          "xpReward": 120,
+          "scenario": "A major gaming forum suffers a public data breach dumping 50 million username and password pairs. What makes you vulnerable to credential stuffing across other services?",
+          "learningObjective": "Prevent lateral movement caused by cross-service password reuse and implement unique credentials with password managers.",
+          "clues": [
+            {
+              "id": "cl-202-1",
+              "name": "Automated Account Checking Bots",
+              "location": "Dark web breach logs",
+              "description": "Attackers run breach lists through automated bots testing matching email/password pairs across PayPal, Gmail, and Amazon.",
+              "threatType": "Credential Stuffing"
+            }
+          ],
+          "options": [
+            {
+              "id": "opt-202-a",
+              "text": "Using variations of the same base password with different digits (e.g. MasterPass1!, MasterPass2!)",
+              "isCorrect": false,
+              "explanation": "Rule-based cracking automatically permutations suffixes from 1 to 9999 in seconds.",
+              "riskPenalty": "-1 Life. Rule-based crack."
+            },
+            {
+              "id": "opt-202-b",
+              "text": "Using a dedicated password manager to generate unique, cryptographically random credentials for every service",
+              "isCorrect": true,
+              "explanation": "Correct! When every service has a completely unique password, a breach at Service A has zero impact on Service B."
+            },
+            {
+              "id": "opt-202-c",
+              "text": "Memorizing one single ultra-strong password and using it everywhere so you never forget it",
+              "isCorrect": false,
+              "explanation": "If even one website with weak security gets breached, that ultra-strong password is now public knowledge.",
+              "riskPenalty": "-1 Life. Total blast radius."
+            },
+            {
+              "id": "opt-202-d",
+              "text": "Writing passwords down in an unencrypted Word document stored in your Documents folder",
+              "isCorrect": false,
+              "explanation": "Infostealer malware scans common document paths for files named passwords.txt or accounts.docx.",
+              "riskPenalty": "-1 Life. Infostealer exfiltration."
+            }
+          ],
+          "correctAnswerId": "opt-202-b",
+          "explanation": "Credential stuffing accounts for billions of unauthorized login attempts every year. A password manager eliminates password reuse entirely."
+        },
+        {
+          "id": "ch-203",
+          "missionId": "mission-2",
+          "title": "HARDCODED API SECRETS IN CODE REPOSITORY",
+          "category": "password",
+          "difficulty": "ADVANCED",
+          "timeLimit": 120,
+          "xpReward": 130,
+          "scenario": "A junior developer pushes code to a public GitHub repository. Inside a file named config.ts, there is a production database connection string with root credentials. Automated scanners detect it in 90 seconds.",
+          "learningObjective": "Understand secret hygiene, environment variables, git history pruning, and instant credential revocation.",
+          "clues": [
+            {
+              "id": "cl-203-1",
+              "name": "Git Commit History Immutability",
+              "location": "Git log",
+              "description": "Simply deleting the line in a new commit leaves the secret permanently exposed in the Git commit history.",
+              "threatType": "Secret Exposure"
+            }
+          ],
+          "options": [
+            {
+              "id": "opt-203-a",
+              "text": "Delete the file in a new commit and push again",
+              "isCorrect": false,
+              "explanation": "The secret is still in git history! Public scrapers search commit histories within seconds of push.",
+              "riskPenalty": "-1 Life. Secret remains in commit history."
+            },
+            {
+              "id": "opt-203-b",
+              "text": "Immediately REVOKE and ROTATE the compromised secret in the cloud provider, then scrub repository history using secret-scanning tools",
+              "isCorrect": true,
+              "explanation": "Accurate! The very first priority is immediate revocation. Assume any pushed secret is already scraped by bots."
+            },
+            {
+              "id": "opt-203-c",
+              "text": "Make the repository private and assume nobody saw it in the 90 seconds it was public",
+              "isCorrect": false,
+              "explanation": "Automated dark-web bots scrape GitHub firehoses in real-time. 90 seconds is plenty of time for automated exploitation.",
+              "riskPenalty": "-1 Life. Bot compromised cloud infrastructure."
+            },
+            {
+              "id": "opt-203-d",
+              "text": "Change the filename to something inconspicuous like data.ts",
+              "isCorrect": false,
+              "explanation": "Attackers use regex scanners searching for API keys and connection strings, not specific filenames.",
+              "riskPenalty": "-1 Life. Trivial detection."
+            }
+          ],
+          "correctAnswerId": "opt-203-b",
+          "explanation": "Once an API key or password hits a public commit, treat it as compromised. Revocation must occur immediately before history rewriting."
+        }
+      ]
+    },
+    {
+      "id": "mission-3",
+      "order": 3,
+      "codeName": "OPERATION QUISH-HUNTER",
+      "title": "QR TRAP",
+      "description": "Inspect weaponized QR codes, tamper overlays, quishing phishing vectors, and malicious payment redirects.",
+      "category": "qr",
+      "difficulty": "INTERMEDIATE",
+      "locked": false,
+      "estimatedTime": "4m 00s",
+      "iconName": "QrCode",
+      "challenges": [
+        {
+          "id": "ch-301",
+          "missionId": "mission-3",
+          "title": "PARKING METER TAMPER STICKER",
+          "category": "qr",
+          "difficulty": "ROOKIE",
+          "timeLimit": 120,
+          "xpReward": 100,
+          "scenario": "You park your car in a downtown garage. A parking meter features a sticker pasted directly OVER the original printed metal sign, saying \"FAST PAY: SCAN TO PAY PARKING\".",
+          "learningObjective": "Inspect physical tampering on public QR codes and distinguish legitimate city parking portals from payment harvesting lookalikes.",
+          "clues": [
+            {
+              "id": "cl-301-1",
+              "name": "Physical Overlay Sticker",
+              "location": "Meter casing",
+              "description": "The QR code is printed on a cheap adhesive sticker pasted over the official embossed metal signage.",
+              "threatType": "Physical QR Tampering"
+            },
+            {
+              "id": "cl-301-2",
+              "name": "Deceptive Top-Level Domain",
+              "location": "Decoded URL",
+              "description": "Scanned URL redirects to \"city-quick-park-pay.biz/credit-card\" instead of the official municipal domain \"parking.city.gov\".",
+              "threatType": "Quishing Payment Scam"
+            }
+          ],
+          "mockData": {
+            "qrScenario": {
+              "qrLabel": "FAST PAY: SCAN TO AVOID PARKING TICKET",
+              "locationPoster": "Pasted on Downtown Meter #4092",
+              "scannedUrl": "https://city-quick-park-pay.biz/portal?meter=4092&fee=15.00",
+              "realDestination": "http://harvest-card-vault.ru/drain",
+              "sslValid": true,
+              "domainAge": "Registered 3 days ago (WHOIS Privacy Guard)",
+              "redFlags": [
+                "Sticker overlay over metal plate",
+                "Generic .biz top-level domain",
+                "Domain registered 3 days ago"
+              ]
+            }
+          },
+          "options": [
+            {
+              "id": "opt-301-a",
+              "text": "Scan the QR and input your credit card number because getting a parking ticket is expensive",
+              "isCorrect": false,
+              "explanation": "Your credit card details are sent directly to card thieves. You will still get a parking ticket because the city never received payment!",
+              "riskPenalty": "-1 Life. Credit card compromised + parking fine."
+            },
+            {
+              "id": "opt-301-b",
+              "text": "Inspect the sticker, verify that official meters use .gov portals or the physical coin/card slot, and report the tampered meter",
+              "isCorrect": true,
+              "explanation": "Bravo! Physical sticker overlays on public parking meters and restaurant menus are a rampant attack vector known as Quishing."
+            },
+            {
+              "id": "opt-301-c",
+              "text": "Peel the sticker off and scan it in private to see where it goes",
+              "isCorrect": false,
+              "explanation": "Visiting malicious sites on your mobile browser can trigger drive-by malware downloads or exploit kit execution.",
+              "riskPenalty": "-1 Life. Mobile exploit triggered."
+            },
+            {
+              "id": "opt-301-d",
+              "text": "Scan with a third-party QR scanner app that offers free cryptocurrency bonuses",
+              "isCorrect": false,
+              "explanation": "Fake QR scanner apps on app stores frequently contain ad fraud, spyware, and permission abuses.",
+              "riskPenalty": "-1 Life. Spyware installed."
+            }
+          ],
+          "correctAnswerId": "opt-301-b",
+          "explanation": "Never trust a QR code printed on a sticker applied over an existing sign. Always look at the decoded URL preview before opening, checking the top-level domain."
+        },
+        {
+          "id": "ch-302",
+          "missionId": "mission-3",
+          "title": "IN-PERSON EVENT BADGE QUISHING",
+          "category": "qr",
+          "difficulty": "INTERMEDIATE",
+          "timeLimit": 120,
+          "xpReward": 120,
+          "scenario": "At a tech conference, someone hands out flyers: \"Scan this QR code to claim your free $50 Uber Eats voucher sponsored by the event host\".",
+          "learningObjective": "Recognize URL shorteners, deceptive incentives, and OAuth harvesting behind promotional QR codes.",
+          "clues": [
+            {
+              "id": "cl-302-1",
+              "name": "Obfuscated Shortened Link",
+              "location": "QR Destination",
+              "description": "The QR resolves to a bit.ly or tinyurl short link that masks the true destination domain.",
+              "threatType": "URL Shortener Masking"
+            },
+            {
+              "id": "cl-302-2",
+              "name": "Too Good To Be True Incentive",
+              "location": "Flyer copy",
+              "description": "Unsolicited $50 cash voucher without requiring any conference ticket proof.",
+              "threatType": "Greed / Reward Lure"
+            }
+          ],
+          "mockData": {
+            "qrScenario": {
+              "qrLabel": "CONFERENCE VIP: $50 UBER EATS SPONSOR VOUCHER",
+              "locationPoster": "Cardboard flyer on lunch tables",
+              "scannedUrl": "https://tinyurl.com/ubereats-vip-sponsor2026",
+              "realDestination": "https://phishing-uber-login.tech/oauth/harvest",
+              "sslValid": true,
+              "domainAge": "12 hours old",
+              "redFlags": [
+                "URL shortener hides actual domain",
+                "Asks for Uber password to \"link discount\""
+              ]
+            }
+          },
+          "options": [
+            {
+              "id": "opt-302-a",
+              "text": "Scan the QR and enter your Uber password to claim the voucher",
+              "isCorrect": false,
+              "explanation": "The phishing page harvests your Uber login, leading to unauthorized rides charged to your saved card.",
+              "riskPenalty": "-1 Life. Account hijacked."
+            },
+            {
+              "id": "opt-302-b",
+              "text": "Unshorten or inspect the URL preview, confirm lack of official event sponsorship, and discard the flyer",
+              "isCorrect": true,
+              "explanation": "Correct! Always expand shortened URLs (using URL checkers) and recognize that legitimate corporate sponsors distribute promo codes, not QR login gates."
+            },
+            {
+              "id": "opt-302-c",
+              "text": "Forward the QR photo to all your friends so they can claim $50 too",
+              "isCorrect": false,
+              "explanation": "Spreading the malicious QR amplifies the scam among your colleagues.",
+              "riskPenalty": "-1 Life. Attack multiplied."
+            },
+            {
+              "id": "opt-302-d",
+              "text": "Scan the QR on your laptop webcam instead of your phone",
+              "isCorrect": false,
+              "explanation": "Laptop browsers are just as vulnerable to credential harvesting sites.",
+              "riskPenalty": "-1 Life. Credential leak."
+            }
+          ],
+          "correctAnswerId": "opt-302-b",
+          "explanation": "QR codes are simply graphical representations of URLs. Treat every QR code with the exact same skepticism as an unknown link in a spam email."
+        }
+      ]
+    },
+    {
+      "id": "mission-4",
+      "order": 4,
+      "codeName": "OPERATION FRAUD-NET",
+      "title": "SCAM NETWORK",
+      "description": "Survive high-pressure conversational scams: advance fee fraud, fake remote employment contracts, and banking OTP interceptions.",
+      "category": "scam",
+      "difficulty": "INTERMEDIATE",
+      "locked": false,
+      "estimatedTime": "4m 30s",
+      "iconName": "AlertOctagon",
+      "challenges": [
+        {
+          "id": "ch-401",
+          "missionId": "mission-4",
+          "title": "REMOTE EMPLOYMENT ADVANCE-FEE SCAM",
+          "category": "scam",
+          "difficulty": "ROOKIE",
+          "timeLimit": 120,
+          "xpReward": 100,
+          "scenario": "You receive an unsolicited message on Telegram from a recruiter claiming to represent a global tech enterprise. They offer $85/hour for a flexible data entry role without an interview, but require you to deposit $250 for \"equipment shipping clearance\".",
+          "learningObjective": "Identify remote work employment scams requiring upfront equipment fees or crypto transfers.",
+          "clues": [
+            {
+              "id": "cl-401-1",
+              "name": "Upfront Payment Demanded for Job",
+              "location": "Recruiter Chat",
+              "description": "Legitimate employers provide equipment or expense stipends; they NEVER demand employees pay for their own onboarding hardware.",
+              "threatType": "Advance-Fee Fraud"
+            },
+            {
+              "id": "cl-401-2",
+              "name": "Unrealistic Pay for Low-Skill Role",
+              "location": "Offer specs",
+              "description": "$85/hour with no technical assessment or video interview is a classic lure targeting job seekers.",
+              "threatType": "Unrealistic Incentive Lure"
+            }
+          ],
+          "mockData": {
+            "scamScenario": {
+              "platform": "Telegram",
+              "senderNumber": "+1 (555) 019-2841",
+              "senderVerified": false,
+              "messages": [
+                {
+                  "fromUser": false,
+                  "text": "Hello! I am Amanda Roberts, Global Talent Director at Apex Cloud Technologies.",
+                  "time": "10:02 AM"
+                },
+                {
+                  "fromUser": false,
+                  "text": "We reviewed your public profile and you have been selected for our Data Optimization Specialist role at $85/hour!",
+                  "time": "10:03 AM"
+                },
+                {
+                  "fromUser": false,
+                  "text": "No video interview needed! We will mail you a brand new MacBook Pro and 4K monitors today.",
+                  "time": "10:04 AM"
+                },
+                {
+                  "fromUser": false,
+                  "text": "To clear international shipping customs and register your corporate hardware ID, wire $250 via Zelle or USDT to our vendor.",
+                  "time": "10:05 AM"
+                }
+              ]
+            }
+          },
+          "options": [
+            {
+              "id": "opt-401-a",
+              "text": "Send the $250 via Zelle immediately so your new MacBook Pro can ship today",
+              "isCorrect": false,
+              "explanation": "The $250 goes straight to the scammer. No job exists, no laptop will arrive, and the scammer will ask for another fee.",
+              "riskPenalty": "-1 Life. $250 lost to advance-fee scam."
+            },
+            {
+              "id": "opt-401-b",
+              "text": "Identify as an advance-fee employment scam: real employers NEVER ask candidates to pay for equipment shipping",
+              "isCorrect": true,
+              "explanation": "Correct! Real companies ship equipment at corporate expense. Any job requiring you to send money upfront is 100% fraudulent."
+            },
+            {
+              "id": "opt-401-c",
+              "text": "Ask if you can pay the $250 after receiving your first paycheck",
+              "isCorrect": false,
+              "explanation": "Engaging allows the scammer to manipulate you further with fake checks and identity theft questionnaires.",
+              "riskPenalty": "-1 Life. Unnecessary engagement."
+            },
+            {
+              "id": "opt-401-d",
+              "text": "Send them a copy of your passport and Social Security Number to prove your identity instead",
+              "isCorrect": false,
+              "explanation": "This hands over full identity theft credentials to an international fraud syndicate!",
+              "riskPenalty": "-1 Life. Identity stolen."
+            }
+          ],
+          "correctAnswerId": "opt-401-b",
+          "explanation": "Employment scams exploit economic anxiety. Remember: money flows from the employer to the employee, never the other way around."
+        },
+        {
+          "id": "ch-402",
+          "missionId": "mission-4",
+          "title": "SMS FRAUD ALERT WITH INTERCEPTED OTP",
+          "category": "scam",
+          "difficulty": "INTERMEDIATE",
+          "timeLimit": 120,
+          "xpReward": 120,
+          "scenario": "An SMS arrives: \"BANK ALERT: Suspicious debit of $1,420 at BestBuy. Did you authorize this? Reply NO if unauthorized.\" You reply NO. Immediately, a phone call comes from the bank's caller ID asking for your one-time verification code.",
+          "learningObjective": "Defeat vishing + SMS fraud combos designed to socially engineer One-Time Passwords (OTPs) to complete unauthorized wire transfers.",
+          "clues": [
+            {
+              "id": "cl-402-1",
+              "name": "Caller ID Spoofing",
+              "location": "Incoming Call Screen",
+              "description": "Attackers use VoIP caller-ID spoofing services to make the incoming call display the bank's real customer service phone number.",
+              "threatType": "Caller ID Spoofing"
+            },
+            {
+              "id": "cl-402-2",
+              "name": "OTP Request to \"Cancel\" Transaction",
+              "location": "Verbal request",
+              "description": "The caller asks: \"Read me the 6-digit code on your screen so I can cancel the fraud.\" In reality, reading the code APPROVES the transfer.",
+              "threatType": "Reverse Social Engineering"
+            }
+          ],
+          "mockData": {
+            "scamScenario": {
+              "platform": "SMS",
+              "senderNumber": "Chase Fraud Alert (Shortcode 24273)",
+              "senderVerified": false,
+              "messages": [
+                {
+                  "fromUser": false,
+                  "text": "CHASE FRAUD ALERT: Debit card transaction for $1,420.00 at BEST BUY FL. Reply YES if authorized, NO if fraudulent.",
+                  "time": "01:10 PM"
+                },
+                {
+                  "fromUser": true,
+                  "text": "NO",
+                  "time": "01:11 PM"
+                },
+                {
+                  "fromUser": false,
+                  "text": "Fraud specialist calling you now to reverse charges and secure your funds.",
+                  "time": "01:11 PM"
+                }
+              ]
+            }
+          },
+          "options": [
+            {
+              "id": "opt-402-a",
+              "text": "Read the 6-digit OTP code to the caller so they can reverse the fraudulent $1,420 transaction",
+              "isCorrect": false,
+              "explanation": "The code on your screen is NOT a cancellation code! It is the authorization code the scammer needs to drain your bank balance.",
+              "riskPenalty": "-1 Life. Bank balance drained."
+            },
+            {
+              "id": "opt-402-b",
+              "text": "Hang up immediately, do NOT share any codes, and call your bank using the official phone number printed on the back of your physical debit card",
+              "isCorrect": true,
+              "explanation": "Flawless decision! Banks will NEVER call you and ask for your one-time verification code. Always dial the number on the back of your physical card."
+            },
+            {
+              "id": "opt-402-c",
+              "text": "Give them only the first 3 digits of the code to see if they are trustworthy",
+              "isCorrect": false,
+              "explanation": "Sharing any part of authentication tokens encourages further exploitation and reveals your compliance.",
+              "riskPenalty": "-1 Life. Risky compromise."
+            },
+            {
+              "id": "opt-402-d",
+              "text": "Ask the caller to tell you your account balance first",
+              "isCorrect": false,
+              "explanation": "Attackers often already have leaked balance or transaction info from infostealer logs or previous breaches.",
+              "riskPenalty": "-1 Life. Deceived by caller."
+            }
+          ],
+          "correctAnswerId": "opt-402-b",
+          "explanation": "One-Time Passcodes are digital signatures. Giving an OTP to a caller is the exact equivalent of handing over your signed checkbook."
+        }
+      ]
+    },
+    {
+      "id": "mission-5",
+      "order": 5,
+      "codeName": "OPERATION HUMAN-FIREWALL",
+      "title": "SOCIAL ENGINEERING",
+      "description": "Resist human exploitation vectors: authority intimidation, vishing, physical badge tailgating, and pretexting.",
+      "category": "social_engineering",
+      "difficulty": "ADVANCED",
+      "locked": false,
+      "estimatedTime": "5m 00s",
+      "iconName": "Users",
+      "challenges": [
+        {
+          "id": "ch-501",
+          "missionId": "mission-5",
+          "title": "FAKE IT SUPPORT PRETEXTING",
+          "category": "social_engineering",
+          "difficulty": "INTERMEDIATE",
+          "timeLimit": 120,
+          "xpReward": 120,
+          "scenario": "A person wearing a polo shirt with an IT logo calls your desk: \"Hi, this is Mark from Enterprise Infrastructure. We are upgrading server firmware and your workstation is throwing memory corruptions. I need your username and domain password to run the patch script.\"",
+          "learningObjective": "Resist pretexting and internal IT impersonation by adhering to the zero-trust credential sharing policy.",
+          "clues": [
+            {
+              "id": "cl-501-1",
+              "name": "Request for User Password",
+              "location": "Phone dialogue",
+              "description": "Legitimate IT administrators have administrative tools and service accounts; they NEVER need your personal password to patch software.",
+              "threatType": "Zero-Trust Violation"
+            },
+            {
+              "id": "cl-501-2",
+              "name": "Urgent Technical Jargon Intimidation",
+              "location": "Call script",
+              "description": "Using technical buzzwords (\"memory corruptions\", \"firmware flash\") to intimidate the target into obedience.",
+              "threatType": "Authority / Technical Intimidation"
+            }
+          ],
+          "mockData": {
+            "socialEngScenario": {
+              "callerName": "Mark Stevens (Claimed IT Support)",
+              "callerRole": "Senior Infrastructure Engineer",
+              "claimedDepartment": "IT Operations Tier 2",
+              "urgencyLevel": "CRITICAL",
+              "dialogue": [
+                {
+                  "speaker": "Mark (IT)",
+                  "text": "Hello, your workstation WS-091 is flooding our core switches with unauthenticated packets. Are you working on something right now?"
+                },
+                {
+                  "speaker": "Target",
+                  "text": "Just wrapping up our quarterly report."
+                },
+                {
+                  "speaker": "Mark (IT)",
+                  "text": "The whole floor could lose network connectivity in 5 minutes unless I run the diagnostic tool under your profile. Give me your domain password quickly so I can resolve it from here."
+                }
+              ]
+            }
+          },
+          "options": [
+            {
+              "id": "opt-501-a",
+              "text": "Give Mark your password quickly so the entire floor does not lose internet connection",
+              "isCorrect": false,
+              "explanation": "The attacker uses your credentials to pivot laterally across the corporate intranet and access confidential file shares.",
+              "riskPenalty": "-1 Life. Enterprise network breached."
+            },
+            {
+              "id": "opt-501-b",
+              "text": "Refuse firmly: IT policy strictly forbids sharing passwords with anyone, including IT staff. Verify via official ticketing portal.",
+              "isCorrect": true,
+              "explanation": "Outstanding! Real IT administrators will never, under any circumstances, ask for your personal account password."
+            },
+            {
+              "id": "opt-501-c",
+              "text": "Offer to type your password into a shared Notepad document instead",
+              "isCorrect": false,
+              "explanation": "Typing your password anywhere visible to another person compromises your credentials immediately.",
+              "riskPenalty": "-1 Life. Credential leak."
+            },
+            {
+              "id": "opt-501-d",
+              "text": "Ask Mark to prove he works in IT by naming your computer's IP address",
+              "isCorrect": false,
+              "explanation": "Internal IP schemes can easily be obtained or guessed from public port scans or network reconnaissance.",
+              "riskPenalty": "-1 Life. False sense of security."
+            }
+          ],
+          "correctAnswerId": "opt-501-b",
+          "explanation": "The golden rule of enterprise cybersecurity: Nobody legitimately needs your password. If someone asks for your password, they are an attacker or violating fundamental security policy."
+        },
+        {
+          "id": "ch-502",
+          "missionId": "mission-5",
+          "title": "SECURE SERVER ROOM TAILGATING",
+          "category": "social_engineering",
+          "difficulty": "ADVANCED",
+          "timeLimit": 120,
+          "xpReward": 130,
+          "scenario": "You badge into the secure data center room. A person holding two large catering trays full of hot coffee cups runs up behind you: \"Hold the door please! My hands are full and I forgot my badge in the van!\"",
+          "learningObjective": "Understand physical security barriers, anti-tailgating protocols, and social engineering politeness traps.",
+          "clues": [
+            {
+              "id": "cl-502-1",
+              "name": "Politeness Weaponization",
+              "location": "Physical environment",
+              "description": "Attackers deliberately carry cumbersome objects (coffee, boxes, ladders) so victims feel impolite closing the door on them.",
+              "threatType": "Tailgating / Piggybacking"
+            }
+          ],
+          "options": [
+            {
+              "id": "opt-502-a",
+              "text": "Hold the door open for them because they have coffee and it would be rude to let it spill",
+              "isCorrect": false,
+              "explanation": "An unauthorized person gains unfettered physical access to company servers and network switches. Physical access equals total compromise!",
+              "riskPenalty": "-1 Life. Data center physical breach."
+            },
+            {
+              "id": "opt-502-b",
+              "text": "Allow the door to close securely behind you. Politely direct them to the reception desk for a visitor badge.",
+              "isCorrect": true,
+              "explanation": "Spot on! Real security requires overcoming the impulse to be polite at the expense of authorization. Every person MUST badge in independently."
+            },
+            {
+              "id": "opt-502-c",
+              "text": "Take one of the coffees, hold the door, and ask them to badge in later",
+              "isCorrect": false,
+              "explanation": "The physical perimeter is broken, violating SOC 2 and ISO 27001 physical security compliance.",
+              "riskPenalty": "-1 Life. Compliance violation."
+            },
+            {
+              "id": "opt-502-d",
+              "text": "Let them in as long as they promise to only deliver the coffee and leave immediately",
+              "isCorrect": false,
+              "explanation": "Promises cannot be audited. Attackers use physical drop devices (Rubber Duckies, Packet Squirrels) that take seconds to plant.",
+              "riskPenalty": "-1 Life. Hardware implant installed."
+            }
+          ],
+          "correctAnswerId": "opt-502-b",
+          "explanation": "Anti-tailgating (piggybacking) rules exist because physical access bypasses software firewalls. Never feel embarrassed to enforce badge requirements."
+        }
+      ]
+    },
+    {
+      "id": "mission-6",
+      "order": 6,
+      "codeName": "OPERATION ZERO-HOUR",
+      "title": "THE DIGITAL LOCKDOWN",
+      "description": "FINAL ESCAPE SCENARIO: A coordinated multi-vector cyber breach is locking down enterprise systems. Neutralize all incoming threats before the clock expires.",
+      "category": "multi_threat",
+      "difficulty": "NIGHTMARE",
+      "locked": false,
+      "estimatedTime": "6m 00s",
+      "iconName": "Lock",
+      "challenges": [
+        {
+          "id": "ch-601",
+          "missionId": "mission-6",
+          "title": "COORDINATED RANSOMWARE KILL-CHAIN",
+          "category": "multi_threat",
+          "difficulty": "NIGHTMARE",
+          "timeLimit": 150,
+          "xpReward": 200,
+          "scenario": "Red alert sirens blare across the SOC dashboard. An unauthenticated endpoint connected to VPN is actively encrypting network file shares while spoofed executive emails tell staff to disregard all warnings. What is your immediate Incident Response action?",
+          "learningObjective": "Execute the NIST Incident Response Framework: rapid containment, network isolation, credential invalidation, and forensic preservation.",
+          "clues": [
+            {
+              "id": "cl-601-1",
+              "name": "Active Lateral Movement & SMB Encryption",
+              "location": "Network telemetry",
+              "description": "Outbound command & control traffic detected on port 445 and 4444. Threat actors are attempting to encrypt domain backup volumes.",
+              "threatType": "Active Ransomware Deployment"
+            }
+          ],
+          "options": [
+            {
+              "id": "opt-601-a",
+              "text": "Pay the cryptocurrency ransom immediately from emergency funds to get the decryption key",
+              "isCorrect": false,
+              "explanation": "Paying ransoms funds criminal enterprises and provides zero guarantee of recovery (over 40% of victims never regain data).",
+              "riskPenalty": "-1 Life. Organization extorted."
+            },
+            {
+              "id": "opt-601-b",
+              "text": "ISOLATE the affected subnet from the network immediately, revoke all active VPN sessions, and initiate immutable offline backup recovery",
+              "isCorrect": true,
+              "explanation": "MASTERCLASS! Immediate network isolation stops lateral propagation of ransomware. Offline immutable backups allow clean restoration."
+            },
+            {
+              "id": "opt-601-c",
+              "text": "Restart all servers at the same time and hope the malware process crashes",
+              "isCorrect": false,
+              "explanation": "Rebooting destroys critical volatile memory (RAM) evidence needed for forensic triage and may trigger persistence run-keys.",
+              "riskPenalty": "-1 Life. Forensic evidence destroyed."
+            },
+            {
+              "id": "opt-601-d",
+              "text": "Reply to the spoofed emails telling everyone to log out of their personal laptops",
+              "isCorrect": false,
+              "explanation": "This does nothing to contain the automated ransomware encryptor running on server infrastructure.",
+              "riskPenalty": "-1 Life. Data loss escalated."
+            }
+          ],
+          "correctAnswerId": "opt-601-b",
+          "explanation": "In active ransomware containment, seconds matter. Immediate physical/logical disconnection stops encryption from spreading to backup repositories."
+        },
+        {
+          "id": "ch-602",
+          "missionId": "mission-6",
+          "title": "THE FINAL DOOR: ZERO-DAY EXFILTRATION GATE",
+          "category": "multi_threat",
+          "difficulty": "NIGHTMARE",
+          "timeLimit": 150,
+          "xpReward": 250,
+          "scenario": "The core escape room lock system requires you to configure the ultimate defense: a multi-layered security architecture that prevents future compromises across all vectors.",
+          "learningObjective": "Synthesize defense-in-depth: Least Privilege, FIDO2 Hardware MFA, Phishing-Resistant protocols, and Continuous Monitoring.",
+          "clues": [
+            {
+              "id": "cl-602-1",
+              "name": "Defense-In-Depth Principle",
+              "location": "Cybersecurity Architecture Core",
+              "description": "No single security control is 100% effective. A resilient system uses overlapping concentric defensive rings.",
+              "threatType": "Architectural Resilience"
+            }
+          ],
+          "options": [
+            {
+              "id": "opt-602-a",
+              "text": "Install a single commercial antivirus software and rely on default settings for all devices",
+              "isCorrect": false,
+              "explanation": "Single-point defenses fail against novel zero-day exploits, social engineering, and memory-only malware.",
+              "riskPenalty": "-1 Life. Defense compromised."
+            },
+            {
+              "id": "opt-602-b",
+              "text": "DEPLOY DEFENSE-IN-DEPTH: FIDO2 Hardware MFA keys, Zero-Trust network segmentation, automated least privilege, and continuous threat behavior training",
+              "isCorrect": true,
+              "explanation": "VICTORY! You have established an impenetrable digital fortress. The digital locks release — YOU ESCAPED!"
+            },
+            {
+              "id": "opt-602-c",
+              "text": "Tell employees to only open emails sent on Tuesdays between 9 AM and 5 PM",
+              "isCorrect": false,
+              "explanation": "Arbitrary procedural restrictions create operational friction without addressing underlying vulnerability vectors.",
+              "riskPenalty": "-1 Life. Ineffective control."
+            },
+            {
+              "id": "opt-602-d",
+              "text": "Disconnect the company from the internet permanently and return to physical carbon-copy paper forms",
+              "isCorrect": false,
+              "explanation": "Total disconnection is operationally impossible in the modern digital age.",
+              "riskPenalty": "-1 Life. Business failure."
+            }
+          ],
+          "correctAnswerId": "opt-602-b",
+          "explanation": "True digital safety is not about luck or memorizing quiz answers. It is continuous vigilance, defense-in-depth, and turning cyber awareness into muscle memory!"
+        }
+      ]
+    }
+  ],
+  "achievements": [
+    {
+      "id": "ach-1",
+      "name": "Phishing Hunter",
+      "description": "Identify 5 malicious communication scenarios without falling for the trap.",
+      "icon": "ShieldCheck",
+      "category": "phishing",
+      "unlocked": true,
+      "unlockedAt": "2026-09-01T10:00:00Z",
+      "xpValue": 150,
+      "progress": {
+        "current": 5,
+        "target": 5
+      }
+    },
+    {
+      "id": "ach-2",
+      "name": "Password Master",
+      "description": "Complete the Password Vault mission with 100% accuracy and zero password reuse.",
+      "icon": "KeyRound",
+      "category": "password",
+      "unlocked": true,
+      "unlockedAt": "2026-09-02T14:30:00Z",
+      "xpValue": 200,
+      "progress": {
+        "current": 5,
+        "target": 5
+      }
+    },
+    {
+      "id": "ach-3",
+      "name": "QR Detective",
+      "description": "Detect tampering and quishing redirects in 5 QR code scenarios.",
+      "icon": "QrCode",
+      "category": "qr",
+      "unlocked": false,
+      "xpValue": 150,
+      "progress": {
+        "current": 2,
+        "target": 5
+      }
+    },
+    {
+      "id": "ach-4",
+      "name": "Social Shield",
+      "description": "Reject authority manipulation, vishing, and tailgating in social engineering tests.",
+      "icon": "UserX",
+      "category": "social_engineering",
+      "unlocked": false,
+      "xpValue": 200,
+      "progress": {
+        "current": 1,
+        "target": 5
+      }
+    },
+    {
+      "id": "ach-5",
+      "name": "Speed Defender",
+      "description": "Complete a mission with more than 50% time remaining on the clock.",
+      "icon": "Zap",
+      "category": "general",
+      "unlocked": true,
+      "unlockedAt": "2026-09-03T18:20:00Z",
+      "xpValue": 100
+    },
+    {
+      "id": "ach-6",
+      "name": "Perfect Escape",
+      "description": "Complete an entire mission without losing a single life.",
+      "icon": "Flame",
+      "category": "general",
+      "unlocked": false,
+      "xpValue": 250
+    },
+    {
+      "id": "ach-7",
+      "name": "Threat Analyst",
+      "description": "Inspect and discover all hidden digital clues in a single mission.",
+      "icon": "Search",
+      "category": "general",
+      "unlocked": true,
+      "unlockedAt": "2026-09-04T12:00:00Z",
+      "xpValue": 150
+    },
+    {
+      "id": "ach-8",
+      "name": "Cyber Sentinel",
+      "description": "Survive all 6 digital escape room missions and unlock the system.",
+      "icon": "Trophy",
+      "category": "general",
+      "unlocked": false,
+      "xpValue": 500
+    }
+  ],
+  "leaderboard": [
+    {
+      "id": "lead-1",
+      "rank": 1,
+      "username": "CipherZero",
+      "avatar": "🛡️",
+      "xp": 9850,
+      "cyberSafetyScore": 97,
+      "level": 7,
+      "levelTitle": "CYBER SENTINEL",
+      "missionsCompleted": 6,
+      "perfectMissions": 5,
+      "streak": 12,
+      "campus": "MIT Cybersecurity Lab",
+      "badge": "🏆 Grandmaster"
+    },
+    {
+      "id": "lead-2",
+      "rank": 2,
+      "username": "GhostProtocol",
+      "avatar": "⚡",
+      "xp": 9420,
+      "cyberSafetyScore": 94,
+      "level": 6,
+      "levelTitle": "DIGITAL GUARDIAN",
+      "missionsCompleted": 6,
+      "perfectMissions": 4,
+      "streak": 9,
+      "campus": "Stanford Infosec",
+      "badge": "🥈 Master Hunter"
+    },
+    {
+      "id": "lead-3",
+      "rank": 3,
+      "username": "ApexDefender",
+      "avatar": "👁️",
+      "xp": 9150,
+      "cyberSafetyScore": 92,
+      "level": 6,
+      "levelTitle": "DIGITAL GUARDIAN",
+      "missionsCompleted": 5,
+      "perfectMissions": 3,
+      "streak": 8,
+      "campus": "UC Berkeley EECS",
+      "badge": "🥉 Elite Spotter"
+    },
+    {
+      "id": "lead-4",
+      "rank": 4,
+      "username": "ByteSentinel",
+      "avatar": "🤖",
+      "xp": 8740,
+      "cyberSafetyScore": 89,
+      "level": 5,
+      "levelTitle": "CYBER DEFENDER",
+      "missionsCompleted": 5,
+      "perfectMissions": 3,
+      "streak": 6,
+      "campus": "Georgia Tech Cyber",
+      "badge": "Security Hunter"
+    },
+    {
+      "id": "lead-5",
+      "rank": 5,
+      "username": "ZeroDaySurfer",
+      "avatar": "🦾",
+      "xp": 8120,
+      "cyberSafetyScore": 86,
+      "level": 5,
+      "levelTitle": "CYBER DEFENDER",
+      "missionsCompleted": 4,
+      "perfectMissions": 2,
+      "streak": 7,
+      "campus": "CMU CyLab",
+      "badge": "Threat Hunter"
+    },
+    {
+      "id": "lead-6",
+      "rank": 6,
+      "username": "ValkyrieRoot",
+      "avatar": "🐺",
+      "xp": 7650,
+      "cyberSafetyScore": 84,
+      "level": 4,
+      "levelTitle": "SECURITY HUNTER",
+      "missionsCompleted": 4,
+      "perfectMissions": 1,
+      "streak": 5,
+      "campus": "Oxford Cyber Security",
+      "badge": "Scout Elite"
+    },
+    {
+      "id": "lead-7",
+      "rank": 7,
+      "username": "Alex_SecOps",
+      "avatar": "🚀",
+      "xp": 4350,
+      "cyberSafetyScore": 82,
+      "level": 4,
+      "levelTitle": "SECURITY HUNTER",
+      "missionsCompleted": 3,
+      "perfectMissions": 1,
+      "streak": 4,
+      "campus": "Global Hackathon Team",
+      "badge": "Rising Star"
+    }
+  ],
+  "sessions": {
+    "usr-demo-judge": {
+      "missionId": "mission-2",
+      "currentChallengeIndex": 0,
+      "currentChallenge": {
+        "id": "ch-201",
+        "missionId": "mission-2",
+        "title": "ENTROPY EVALUATION & CRACK TIME",
+        "category": "password",
+        "difficulty": "ROOKIE",
+        "timeLimit": 120,
+        "xpReward": 100,
+        "scenario": "Evaluate four candidate passwords for an enterprise database administrator account. Identify the strongest option that withstands modern GPU cluster dictionary attacks.",
+        "learningObjective": "Understand length vs complexity, word combinations, and entropy calculations in password defense.",
+        "clues": [
+          {
+            "id": "cl-201-1",
+            "name": "Length Multiplier Law",
+            "location": "Cryptographic rules",
+            "description": "Every additional random character exponentially increases keyspace far more than simple character substitutions (e.g. @ for a).",
+            "threatType": "Keyspace Mathematics"
+          }
+        ],
+        "mockData": {
+          "passwordScenario": {
+            "context": "Select the cryptographically superior password for an administrator vault:",
+            "candidates": [
+              {
+                "id": "pw-1",
+                "passwordText": "P@$$w0rd2026!",
+                "strength": "Weak",
+                "crackTime": "0.04 seconds on RTX 4090 cluster",
+                "entropy": 34,
+                "flaws": [
+                  "Predictable l33t speak substitutions",
+                  "Common dictionary root",
+                  "Sequential year suffix"
+                ]
+              },
+              {
+                "id": "pw-2",
+                "passwordText": "AdminSummer99#",
+                "strength": "Weak",
+                "crackTime": "1.2 seconds",
+                "entropy": 38,
+                "flaws": [
+                  "Season + Year pattern (top 10 enterprise breach list)"
+                ]
+              },
+              {
+                "id": "pw-3",
+                "passwordText": "flock-cobalt-granite-whistle-49",
+                "strength": "Strong",
+                "crackTime": "42,000,000 Years",
+                "entropy": 84,
+                "flaws": [
+                  "None. 5 random unrelated words + numeric salt with high entropy"
+                ]
+              },
+              {
+                "id": "pw-4",
+                "passwordText": "Tr0ub4dor&3",
+                "strength": "Medium",
+                "crackTime": "3 days",
+                "entropy": 46,
+                "flaws": [
+                  "Famous xkcd example, well-known in wordlists"
+                ]
+              }
+            ]
+          }
+        },
+        "options": [
+          {
+            "id": "opt-201-a",
+            "text": "P@$$w0rd2026! (Has symbols, uppercase, lowercase, and numbers)",
+            "isCorrect": false,
+            "explanation": "Modern hash-cracking tools (Hashcat) crack this in under a second because the substitution rules are pre-computed.",
+            "riskPenalty": "-1 Life. Cracked in 0.04s."
+          },
+          {
+            "id": "opt-201-b",
+            "text": "AdminSummer99# (Contains uppercase and company-themed season)",
+            "isCorrect": false,
+            "explanation": "Season+Year is the #1 password pattern targeted by automated password-spraying tools against Active Directory.",
+            "riskPenalty": "-1 Life. Password sprayed."
+          },
+          {
+            "id": "opt-201-c",
+            "text": "flock-cobalt-granite-whistle-49 (Passphrase with 30+ chars, random words, massive entropy)",
+            "isCorrect": true,
+            "explanation": "Correct! Length is king in cryptographic entropy. A 5-word random passphrase takes billions of years to brute force."
+          },
+          {
+            "id": "opt-201-d",
+            "text": "Tr0ub4dor&3 (Classic complex short password)",
+            "isCorrect": false,
+            "explanation": "Too short (11 chars) and present in public breach wordlists.",
+            "riskPenalty": "-1 Life. Dictionary match."
+          }
+        ],
+        "correctAnswerId": "opt-201-c",
+        "explanation": "Length beats complexity every time. A 4-5 random word passphrase (Diceware style) provides 80+ bits of entropy while remaining memorable without predictable patterns."
+      },
+      "totalChallenges": 3,
+      "lives": 3,
+      "score": 50,
+      "xpEarned": 50,
+      "combo": 0,
+      "discoveredClues": [
+        "cl-201-1"
+      ],
+      "hintsUsed": 0,
+      "timeRemaining": 120,
+      "startedAt": 1789034542490,
+      "isComplete": false,
+      "isBreached": false,
+      "attempts": []
+    },
+    "usr-1789032870665-neoem": {
+      "missionId": "mission-1",
+      "currentChallengeIndex": 0,
+      "currentChallenge": {
+        "id": "ch-101",
+        "missionId": "mission-1",
+        "title": "URGENT ACCOUNT SUSPENSION ALERT",
+        "category": "phishing",
+        "difficulty": "ROOKIE",
+        "timeLimit": 120,
+        "xpReward": 100,
+        "scenario": "A student receives an alarming email stating their institutional account will be terminated in 2 hours unless immediate verification is performed.",
+        "learningObjective": "Analyze sender domain mismatches, artificial urgency, and deceptive link targets in institutional phishing.",
+        "clues": [
+          {
+            "id": "cl-101-1",
+            "name": "Sender Domain Mismatch",
+            "location": "From: header",
+            "description": "The sender claims to be University IT, but the actual domain is @university-account-verification.example rather than the legitimate @university.edu domain.",
+            "threatType": "Domain Spoofing"
+          },
+          {
+            "id": "cl-101-2",
+            "name": "Artificial Urgency Deadline",
+            "location": "Subject & Body",
+            "description": "The message insists on action within 2 hours (\"Account suspended in 01:59:59\") to force panic and bypass critical thinking.",
+            "threatType": "Psychological Coercion"
+          },
+          {
+            "id": "cl-101-3",
+            "name": "Obfuscated Target URL",
+            "location": "Action Button",
+            "description": "The button displays \"verify-edu.org\" but the actual hyperlink destination is \"http://suspicious-login-gate.net/harvest?session=4912\".",
+            "threatType": "Deceptive Hyperlink"
+          }
+        ],
+        "mockData": {
+          "email": {
+            "senderName": "University IT Security Desk",
+            "senderEmail": "security@university-account-verification.example",
+            "replyTo": "harvester-drop99@temp-mail.ru",
+            "subject": "⚠️ CRITICAL: Your university account will be suspended within 2 hours",
+            "date": "Today, 09:14 AM",
+            "body": "Dear Student/Staff Member,\n\nOur automated security scanner detected unverified activity on your institutional mailbox. Due to recent security compliance updates, all unverified accounts will be permanently wiped within 2 hours.\n\nTo prevent immediate suspension, you must verify your identity immediately by clicking the secure university portal link below.",
+            "targetUrl": "http://suspicious-login-gate.net/harvest?session=4912",
+            "displayUrl": "https://portal.university.edu/verify-identity",
+            "attachmentName": "Account_Termination_Notice_Scan.pdf.exe",
+            "attachmentType": "Executable hidden as PDF"
+          }
+        },
+        "options": [
+          {
+            "id": "opt-101-a",
+            "text": "Open the link immediately to prevent your university account from being locked",
+            "isCorrect": false,
+            "explanation": "Opening the link navigates to an unauthorized credential harvesting portal designed to steal your student password.",
+            "riskPenalty": "-1 Life. Credentials compromised."
+          },
+          {
+            "id": "opt-101-b",
+            "text": "Reply to the sender email asking for their staff identification number",
+            "isCorrect": false,
+            "explanation": "Replying confirms your email address is active to the attacker and replies to an attacker drop-box address.",
+            "riskPenalty": "-1 Life. Confirmed target status."
+          },
+          {
+            "id": "opt-101-c",
+            "text": "REPORT PHISHING to IT Security and delete the message without clicking any links",
+            "isCorrect": true,
+            "explanation": "Correct! You correctly spotted the lookalike domain, artificial panic timeline, and hidden executable attachment."
+          },
+          {
+            "id": "opt-101-d",
+            "text": "Forward the email to classmates to warn them using the provided link",
+            "isCorrect": false,
+            "explanation": "Forwarding propagates the phishing attack and could compromise classmates who click the link.",
+            "riskPenalty": "-1 Life. Attack propagated."
+          }
+        ],
+        "correctAnswerId": "opt-101-c",
+        "explanation": "Attackers frequently forge organizational authority and induce urgency. Always inspect the true domain suffix and never click embedded verification links from unsolicited warnings."
+      },
+      "totalChallenges": 5,
+      "lives": 3,
+      "score": 0,
+      "xpEarned": 0,
+      "combo": 0,
+      "discoveredClues": [],
+      "hintsUsed": 0,
+      "timeRemaining": 120,
+      "startedAt": 1789033031345,
+      "isComplete": false,
+      "isBreached": false,
+      "attempts": []
+    },
+    "usr-1789033302912-e61u8": {
+      "missionId": "mission-1",
+      "currentChallengeIndex": 0,
+      "currentChallenge": {
+        "id": "ch-101",
+        "missionId": "mission-1",
+        "title": "URGENT ACCOUNT SUSPENSION ALERT",
+        "category": "phishing",
+        "difficulty": "ROOKIE",
+        "timeLimit": 120,
+        "xpReward": 100,
+        "scenario": "A student receives an alarming email stating their institutional account will be terminated in 2 hours unless immediate verification is performed.",
+        "learningObjective": "Analyze sender domain mismatches, artificial urgency, and deceptive link targets in institutional phishing.",
+        "clues": [
+          {
+            "id": "cl-101-1",
+            "name": "Sender Domain Mismatch",
+            "location": "From: header",
+            "description": "The sender claims to be University IT, but the actual domain is @university-account-verification.example rather than the legitimate @university.edu domain.",
+            "threatType": "Domain Spoofing"
+          },
+          {
+            "id": "cl-101-2",
+            "name": "Artificial Urgency Deadline",
+            "location": "Subject & Body",
+            "description": "The message insists on action within 2 hours (\"Account suspended in 01:59:59\") to force panic and bypass critical thinking.",
+            "threatType": "Psychological Coercion"
+          },
+          {
+            "id": "cl-101-3",
+            "name": "Obfuscated Target URL",
+            "location": "Action Button",
+            "description": "The button displays \"verify-edu.org\" but the actual hyperlink destination is \"http://suspicious-login-gate.net/harvest?session=4912\".",
+            "threatType": "Deceptive Hyperlink"
+          }
+        ],
+        "mockData": {
+          "email": {
+            "senderName": "University IT Security Desk",
+            "senderEmail": "security@university-account-verification.example",
+            "replyTo": "harvester-drop99@temp-mail.ru",
+            "subject": "⚠️ CRITICAL: Your university account will be suspended within 2 hours",
+            "date": "Today, 09:14 AM",
+            "body": "Dear Student/Staff Member,\n\nOur automated security scanner detected unverified activity on your institutional mailbox. Due to recent security compliance updates, all unverified accounts will be permanently wiped within 2 hours.\n\nTo prevent immediate suspension, you must verify your identity immediately by clicking the secure university portal link below.",
+            "targetUrl": "http://suspicious-login-gate.net/harvest?session=4912",
+            "displayUrl": "https://portal.university.edu/verify-identity",
+            "attachmentName": "Account_Termination_Notice_Scan.pdf.exe",
+            "attachmentType": "Executable hidden as PDF"
+          }
+        },
+        "options": [
+          {
+            "id": "opt-101-a",
+            "text": "Open the link immediately to prevent your university account from being locked",
+            "isCorrect": false,
+            "explanation": "Opening the link navigates to an unauthorized credential harvesting portal designed to steal your student password.",
+            "riskPenalty": "-1 Life. Credentials compromised."
+          },
+          {
+            "id": "opt-101-b",
+            "text": "Reply to the sender email asking for their staff identification number",
+            "isCorrect": false,
+            "explanation": "Replying confirms your email address is active to the attacker and replies to an attacker drop-box address.",
+            "riskPenalty": "-1 Life. Confirmed target status."
+          },
+          {
+            "id": "opt-101-c",
+            "text": "REPORT PHISHING to IT Security and delete the message without clicking any links",
+            "isCorrect": true,
+            "explanation": "Correct! You correctly spotted the lookalike domain, artificial panic timeline, and hidden executable attachment."
+          },
+          {
+            "id": "opt-101-d",
+            "text": "Forward the email to classmates to warn them using the provided link",
+            "isCorrect": false,
+            "explanation": "Forwarding propagates the phishing attack and could compromise classmates who click the link.",
+            "riskPenalty": "-1 Life. Attack propagated."
+          }
+        ],
+        "correctAnswerId": "opt-101-c",
+        "explanation": "Attackers frequently forge organizational authority and induce urgency. Always inspect the true domain suffix and never click embedded verification links from unsolicited warnings."
+      },
+      "totalChallenges": 5,
+      "lives": 3,
+      "score": 0,
+      "xpEarned": 0,
+      "combo": 0,
+      "discoveredClues": [],
+      "hintsUsed": 0,
+      "timeRemaining": 120,
+      "startedAt": 1789033443517,
+      "isComplete": false,
+      "isBreached": false,
+      "attempts": []
+    }
+  },
+  "gauntletRuns": {
+    "usr-demo-judge": {
+      "runId": "gauntlet-1789032045132-p4rmv",
+      "userId": "usr-demo-judge",
+      "currentLevel": 1,
+      "totalLevels": 20,
+      "tier": "ROOKIE",
+      "lives": 2,
+      "score": 0,
+      "xpEarned": 0,
+      "combo": 0,
+      "encounteredChallengeIds": [
+        "ch-102"
+      ],
+      "currentChallenge": {
+        "id": "ch-102",
+        "missionId": "mission-1",
+        "title": "PAYROLL UPDATE DISCREPANCY",
+        "category": "phishing",
+        "difficulty": "ROOKIE",
+        "timeLimit": 120,
+        "xpReward": 100,
+        "scenario": "An email arrives from \"HR Global Payroll\" requesting you review an attached macro-enabled spreadsheet to claim a direct deposit adjustment.",
+        "learningObjective": "Recognize weaponized office attachments (.xlsm / macros) used to drop ransomware and steal session tokens.",
+        "clues": [
+          {
+            "id": "cl-102-1",
+            "name": "Macro-Enabled Extension",
+            "location": "Attachment name",
+            "description": "The attachment is titled \"Q3_Bonus_Adjustment_Calculation.xlsm\" — macro-enabled workbooks can run arbitrary malicious scripts on execution.",
+            "threatType": "Malicious Attachment"
+          },
+          {
+            "id": "cl-102-2",
+            "name": "Generic Greeting",
+            "location": "Email greeting",
+            "description": "Addressed to \"Valued Employee\" rather than your specific legal name, indicating bulk untargeted phishing.",
+            "threatType": "Generic Phishing Indicator"
+          }
+        ],
+        "mockData": {
+          "email": {
+            "senderName": "HR Global Payroll Department",
+            "senderEmail": "payroll-department@corporate-hr-notices.net",
+            "subject": "Direct Deposit Adjustment Notice: Q3 Compensation Adjustment",
+            "date": "Yesterday, 4:45 PM",
+            "body": "Attention Valued Employee,\n\nA discrepancy was identified in your compensation distribution for this pay cycle. Please open the attached spreadsheet, click \"Enable Content/Macros\" when prompted, and confirm your bank routing number.",
+            "targetUrl": "https://corporate-hr-notices.net/upload",
+            "displayUrl": "https://hr.internal.com/payroll",
+            "attachmentName": "Q3_Bonus_Adjustment_Calculation.xlsm",
+            "attachmentType": "Macro-Enabled Excel Spreadsheet"
+          }
+        },
+        "options": [
+          {
+            "id": "opt-102-a",
+            "text": "Download the spreadsheet and click \"Enable Macros\" to see the bonus calculation",
+            "isCorrect": false,
+            "explanation": "Enabling macros executes arbitrary PowerShell scripts that download malicious payloads.",
+            "riskPenalty": "-1 Life. Malware executed."
+          },
+          {
+            "id": "opt-102-b",
+            "text": "Inspect attachment extension, refrain from opening, and report to SecOps via official channels",
+            "isCorrect": true,
+            "explanation": "Spot on! Never enable macros on unsolicited documents, and verify payroll requests directly on your authenticated portal."
+          },
+          {
+            "id": "opt-102-c",
+            "text": "Open the spreadsheet on your phone instead since phones cannot run macros",
+            "isCorrect": false,
+            "explanation": "Modern mobile devices can still be compromised by multi-stage exploit payloads or credential phishing forms.",
+            "riskPenalty": "-1 Life. Risky behavior."
+          },
+          {
+            "id": "opt-102-d",
+            "text": "Reply with your bank routing number directly in plain text to avoid macro issues",
+            "isCorrect": false,
+            "explanation": "Sending sensitive financial data via unencrypted email exposes your account to identity theft.",
+            "riskPenalty": "-1 Life. Data exfiltrated."
+          }
+        ],
+        "correctAnswerId": "opt-102-b",
+        "explanation": "Macro-enabled spreadsheets (.xlsm, .docm) are one of the most common ransomware vectors. Legitimate HR systems never ask you to enable macros to calculate payroll."
+      },
+      "isEliminated": false,
+      "isGauntletCompleted": false,
+      "startedAt": 1789032045132
+    }
+  },
+  "attempts": [
+    {
+      "id": "att-seed-1",
+      "userId": "usr-demo-judge",
+      "username": "Agent_Specter",
+      "challengeId": "ch-101",
+      "challengeTitle": "URGENT ACCOUNT SUSPENSION ALERT",
+      "category": "phishing",
+      "isCorrect": true,
+      "responseTimeMs": 8400,
+      "timestamp": "2026-09-10T07:49:02.496Z"
+    },
+    {
+      "id": "att-seed-2",
+      "userId": "usr-demo-judge",
+      "username": "Agent_Specter",
+      "challengeId": "ch-301",
+      "challengeTitle": "PARKING METER TAMPER STICKER",
+      "category": "qr",
+      "isCorrect": false,
+      "responseTimeMs": 14200,
+      "timestamp": "2026-09-10T08:19:02.496Z"
+    }
+  ]
+}

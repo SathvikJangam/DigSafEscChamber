@@ -57,6 +57,7 @@ export const EscapeRoomArena: React.FC<EscapeRoomArenaProps> = ({
   const [hintText, setHintText] = useState<string | undefined>(undefined);
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
   const [coachFeedback, setCoachFeedback] = useState<AiCoachFeedback | null>(null);
+  const [nextChallengePending, setNextChallengePending] = useState<Challenge | null>(null);
   const [lastXPBreakdown, setLastXPBreakdown] = useState<{ xpGained: number; speedBonus: number }>({
     xpGained: 0,
     speedBonus: 0
@@ -79,6 +80,7 @@ export const EscapeRoomArena: React.FC<EscapeRoomArenaProps> = ({
       setSession(res.session);
       setMissionTitle(res.missionTitle);
       setCurrentChallenge(res.currentChallenge);
+      setNextChallengePending(null);
       setDiscoveredClues([]);
       setTimeRemaining(res.currentChallenge.timeLimit || 120);
       setHintsUsed(0);
@@ -168,6 +170,9 @@ export const EscapeRoomArena: React.FC<EscapeRoomArenaProps> = ({
         speedBonus: res.speedBonus
       });
 
+      // Save next challenge returned by backend
+      setNextChallengePending(res.nextChallenge || null);
+
       // Update session state
       setSession((prev) =>
         prev
@@ -175,7 +180,9 @@ export const EscapeRoomArena: React.FC<EscapeRoomArenaProps> = ({
               ...prev,
               lives: res.lives,
               score: res.score,
-              combo: res.combo
+              combo: res.combo,
+              isBreached: res.isBreached,
+              isComplete: res.isMissionComplete
             }
           : null
       );
@@ -215,10 +222,18 @@ export const EscapeRoomArena: React.FC<EscapeRoomArenaProps> = ({
   // Advance to next challenge when coach modal continues
   const handleCoachContinue = () => {
     setCoachFeedback(null);
-    if (session && session.currentChallengeIndex + 1 < session.totalChallenges) {
-      const nextIdx = session.currentChallengeIndex + 1;
-      const nextCh = session.currentChallenge; // Backend updated it
-      setSession((prev) => (prev ? { ...prev, currentChallengeIndex: nextIdx } : null));
+    if (nextChallengePending) {
+      const nextCh = nextChallengePending;
+      setNextChallengePending(null);
+      setSession((prev) =>
+        prev
+          ? {
+              ...prev,
+              currentChallengeIndex: prev.currentChallengeIndex + 1,
+              currentChallenge: nextCh
+            }
+          : null
+      );
       setCurrentChallenge(nextCh);
       setDiscoveredClues([]);
       setTimeRemaining(nextCh.timeLimit || 120);
@@ -295,6 +310,7 @@ export const EscapeRoomArena: React.FC<EscapeRoomArenaProps> = ({
       <div>
         {category === 'phishing' && (
           <EmailInspector
+            key={currentChallenge.id}
             challenge={currentChallenge}
             discoveredClues={discoveredClues}
             onDiscoverClue={handleDiscoverClue}
@@ -308,6 +324,7 @@ export const EscapeRoomArena: React.FC<EscapeRoomArenaProps> = ({
 
         {category === 'password' && (
           <PasswordInspector
+            key={currentChallenge.id}
             challenge={currentChallenge}
             discoveredClues={discoveredClues}
             onDiscoverClue={handleDiscoverClue}
@@ -321,6 +338,7 @@ export const EscapeRoomArena: React.FC<EscapeRoomArenaProps> = ({
 
         {category === 'qr' && (
           <QRInspector
+            key={currentChallenge.id}
             challenge={currentChallenge}
             discoveredClues={discoveredClues}
             onDiscoverClue={handleDiscoverClue}
@@ -334,6 +352,7 @@ export const EscapeRoomArena: React.FC<EscapeRoomArenaProps> = ({
 
         {category === 'scam' && (
           <ScamInspector
+            key={currentChallenge.id}
             challenge={currentChallenge}
             discoveredClues={discoveredClues}
             onDiscoverClue={handleDiscoverClue}
@@ -347,6 +366,7 @@ export const EscapeRoomArena: React.FC<EscapeRoomArenaProps> = ({
 
         {(category === 'social_engineering' || category === 'multi_threat') && (
           <SocialEngInspector
+            key={currentChallenge.id}
             challenge={currentChallenge}
             discoveredClues={discoveredClues}
             onDiscoverClue={handleDiscoverClue}
